@@ -1,0 +1,55 @@
+@import '../../scss/variables.scss';
+
+.details {
+  background-image: url(../../assets/bg3.jpg);
+  @include details();
+}
+
+.countDet {
+  background-image: url(../../assets/pergamino2.png);
+  @include countDet();
+}
+
+.content{
+  @include contentDetail();
+}
+
+.fladet {
+  @include imagesDetail();
+  float: left;
+}
+
+.coatdet{
+  @include imagesDetail();
+  padding-right: 5%;
+  width: 30%;
+  float: right;
+}
+
+.coudet {
+  color: rgb(49, 0, 0);
+  font-size: 35px;
+}
+
+.back {
+  @include botonRegresar();
+}
+.back:hover {
+  font-size: 25px;
+}
+
+.back:focus {
+  outline: 0;
+}
+
+.activity {
+  @include activity();
+}
+
+.noActivity{
+  @include noActivity();
+}
+.titleAct{
+  font-weight: bold;
+  font-size: larger;
+}

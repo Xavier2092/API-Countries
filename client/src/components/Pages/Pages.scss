@@ -1,0 +1,10 @@
+@import "../../scss/variables.scss";
+
+.pages {
+  @include pages();
+}
+
+.number {
+  list-style: none;
+  cursor: pointer;
+}

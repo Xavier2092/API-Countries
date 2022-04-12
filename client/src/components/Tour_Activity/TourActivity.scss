@@ -1,0 +1,105 @@
+@import "../../scss/variables.scss";
+
+.tourActivity {
+  @include tourActivity();
+}
+
+.formulario {
+  @include formulario();
+}
+
+label {
+  margin: 15px;
+  font-weight: bold;
+}
+
+input {
+  margin: 5px;
+  font-family: medievalSharp;
+}
+
+select{
+  font-family: medievalSharp;
+  font-weight: bold;
+}
+
+.selForm {
+  margin: 15px;
+}
+
+.tourTit {
+  position: absolute;
+  font-family: MedievalSharp;
+  font-size: 30px;
+  color:rgb(49, 0, 0);
+  margin-top: 55px;
+}
+
+.error {
+  color: rgb(161, 37, 37);
+  align-items: center;
+}
+
+.pais {
+  color: rgb(6, 6, 75);
+  font-family: MedievalSharp;
+  float:left;
+  position: relative;
+  margin: 10px;
+}
+
+.botonX {
+  border-color: rgb(75, 6, 6);
+  width: 15px;
+  background-color: rgb(100, 0, 0);
+  color: white;
+}
+
+.back {
+  font-family: medievalSharp;
+  font-size: 20px;
+  padding: 0.5em 1.2em;
+  transition: all 1s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  width: 150%;
+}
+.back:hover {
+  font-size: 25px;
+  color: rgb(150, 0, 0);
+  font-weight: bolder;
+}
+
+.back:focus {
+  outline: 0;
+}
+
+.crear{
+  @include buttonCrearActividad();
+}
+
+.crear:hover {
+  background-position: 0;
+  color: #fff;
+  background: rgb(49, 0, 0);
+  outline: 0;
+}
+
+.crear:focus {
+  color: #fff;
+  background: rgb(49, 0, 0);
+  outline: 0;
+}
+
+.paises{
+  color: rgb(49, 0, 0);
+  font-family: MedievalSharp;
+}
+
+.pais{
+  display: flex;
+  float: left;
+}

@@ -1,0 +1,49 @@
+@import '../../scss/variables';
+.home {
+  background-image: url(../../assets/bg3.jpg);
+  @include bgdefault();
+}
+
+.findBy{
+  @include findBy();
+}
+
+.cards {
+  @include cards();
+}
+
+.filtros {
+  @include filtros();
+}
+
+.filtro {
+  @include filtro();
+}
+
+.filtro .selHome {
+  @include selHome();
+}
+
+.filtro .selHome:focus {
+  outline: none;
+}
+
+.filtro .selHome:hover, .filtros:hover{
+  cursor: pointer;
+
+}
+.filtro::after {
+  content:"\025be";
+  @include filtroAfter();
+}
+
+.bfiltro {
+  @include bFiltro();
+}
+.bfiltro:hover {
+  @include bFiltroHover();
+}
+
+.bfiltro:focus {
+  @include bFiltroFocus();
+}
