@@ -26,6 +26,7 @@ export default function Details(){
             <div className='content'>
               <div className='images'>
                 <img src={countryDetail.flag} alt='Bandera' className='fladet'/>
+                <img src={countryDetail.coatOfArms} alt='Escudo' className='coatdet'/>
               </div>
               <h2 className='coudet'>{countryDetail.nameCountry}</h2>
               <h3><i>Capital:</i>  {countryDetail.capital[0]}</h3>

@@ -13,22 +13,29 @@ export default function SearchBar({setCurrentPage}){
 
 
   function handleInputChange(ev){
-    console.log(ev.target.value)
-    ev.preventDefault();
+    console.log(ev.target.value);
     setName(ev.target.value);
+    ev.preventDefault();
   }
 
   function handleSubmit(ev){
     ev.preventDefault();
-      dispatch(getCountryName(name))
-      setCurrentPage(1);
+      if(!name){
+        alert('Debe escribir el nombre de algún país.');
+      }
+    dispatch(getCountryName(name))
+    setCurrentPage(1);
   }
   
     return (
       <div className='navbar'>
-        <NavLink to="/"><img src={icono} alt='Icono' className='icono'/></NavLink>
+        <NavLink to="/">
+          <img src={icono} alt='Icono' className='icono'/>
+        </NavLink>
+        
         <NavLink to="/TourActivity" className='actForm'>
-              <h4 className='crearActividad'>Crear Actividad</h4></NavLink>
+              <h4 className='crearActividad'>Crear Actividad</h4>
+        </NavLink>
         <div className='search'>
           <form onSubmit={handleSubmit}>
             <input type='text' placeholder='Buscar País' onChange={handleInputChange} value={name} />

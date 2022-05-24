@@ -11,6 +11,7 @@ import './Home.scss'
 import Card from '../Card/Card.jsx';
 import Pages from '../Pages/Pages.jsx';
 import SearchBar from '../SearchBar/SearchBar.jsx';
+import { NavLink } from 'react-router-dom';
 
 
 export default function Home(){
@@ -113,6 +114,10 @@ export default function Home(){
             <div className= "filtro">
               <select onChange={ev=> handleCountryActivity(ev)} className='selHome'>
                 <option value={'All'}>Actividad</option>
+                if(newActTour.length === 0){
+                  <NavLink to="/TourActivity" className='actForm'>
+                  <p className='crearActividad'>No Hay actividades. ¿Crear?</p>
+                </NavLink>}
                 { newActTour && newActTour.map(act => <option key={act} value={act}>{act}</option>)}
               </select>
             </div>
